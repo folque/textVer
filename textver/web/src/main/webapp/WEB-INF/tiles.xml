@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="base.definition" template="/WEB-INF/views/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/views/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/menu.jsp" />
+		<put-attribute name="submenu" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />
+	</definition>
+
+	<definition name="fileList" extends="base.definition">
+		<put-attribute name="title" value="FileList" />
+		<put-attribute name="body" value="/WEB-INF/views/fileList.jsp" />
+	</definition>
+
+	<definition name="createFile" extends="base.definition">
+		<put-attribute name="title" value="createFile" />
+		<put-attribute name="body" value="/WEB-INF/views/createFile.jsp" />
+	</definition>
+
+	<definition name="viewFile" extends="base.definition">
+		<put-attribute name="title" value="viewFile" />
+		<put-attribute name="body" value="/WEB-INF/views/viewFile.jsp" />
+		<put-attribute name="submenu" value="/WEB-INF/views/submenu.jsp" />
+	</definition>
+
+	<definition name="login" extends="base.definition">
+		<put-attribute name="title" value="login.title" />
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="submenu" value=""/>
+	</definition>
+
+	<definition name="error" extends="base.definition">
+		<put-attribute name="title" value="error" />
+		<put-attribute name="body" value="/WEB-INF/views/error.jsp" />
+	</definition>
+</tiles-definitions>
